@@ -20,7 +20,10 @@
 <a name="about"></a>
 ### About
 
-This library provides a pair of React components to display a connected country and region dropdowns. If you're not using React, check out the [plain vanilla JS version](https://github.com/country-regions/country-region-selector) of the library instead. The list of countries and regions is maintained separately and found in the [country-region-data](https://github.com/country-regions/country-region-data) repo.
+This library provides a pair of React components to display a connected country and region dropdowns. If you're not using React, check out the [plain vanilla JS version](https://github.com/country-regions/country-region-selector).
+
+The list of countries and regions is maintained separately and found in the  
+[country-region-data](https://github.com/country-regions/country-region-data) repo.
 
 
 <a name="features"></a>
@@ -150,6 +153,7 @@ added to the actual DOM element._
 | valueType | No | `"full"` | `string` | Either `"full"` or `"short"`. This controls the actual `value` attribute of each `<option>` in the dropdown.  |
 | disableWhenEmpty | No | `false` | `boolean` | Disables the region field when the user hasn't selected a country. |
 | disabled | No | `false` | `boolean` | Disables the region field. If set to true, it overrides `disableWhenEmpty` | 
+| customOptions | No | `[]` | `Array<string>` | Adds a list of string to the region dropdown.
 
 
 <a name="command-line"></a>
