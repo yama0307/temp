@@ -20,10 +20,7 @@
 <a name="about"></a>
 ### About
 
-This library provides a pair of React components to display a connected country and region dropdowns. If you're not using React, check out the [plain vanilla JS version](https://github.com/country-regions/country-region-selector).
-
-The list of countries and regions is maintained separately and found in the  
-[country-region-data](https://github.com/country-regions/country-region-data) repo.
+This library provides a pair of React components to display a connected country and region dropdowns. If you're not using React, check out the [plain vanilla JS version](https://github.com/country-regions/country-region-selector) of the library instead. The list of countries and regions is maintained separately and found in the [country-region-data](https://github.com/country-regions/country-region-data) repo.
 
 
 <a name="features"></a>
@@ -129,7 +126,7 @@ added to the actual DOM element._
 | defaultOptionLabel | No | `"Select Country"` | `string` | The default option label. |
 | labelType | No | `"full"` | `string` | Either `"full"` or `"short"`. This governs whether you see country names or country short codes in the dropdown. |
 | valueType | No | `"full"` | `string` | Either `"full"` or `"short"`. This controls the actual `value` attribute of  each `<option>` in the dropdown. Please note, if you set this to `"short"` you will need to let the corresponding `<RegionDropdown />` component know as well, by passing a `countryValueType="short"` attribute. |
-| whitelist | No | `[]` | `array` | This setting lets you target specific countries to appear in the dropdown. Only those specified here will appear. This should be an array of country shortcodes. See the [country-region-data](https://github.com/country-region-data/country-region-data) repo for the data and the shortcodes. |
+| whitelist | No | `[]` | `array` | This setting lets you target specific countries to appear in the dropdown. Only those specified here will appear. This should be an array of country shortcodes. See the [country-region-data](https://github.com/country-regions/country-region-data) repo for the data and the shortcodes. |
 | blacklist | No | `[]` | `array` | Lets you target countries that should *not* appear in the dropdown. Should also be an array of country shortcodes. |
 | disabled | No | `false` | `boolean` | Disables the country field. |
 
