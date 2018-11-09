@@ -127,7 +127,7 @@ added to the actual DOM element._
 | defaultOptionLabel | No | `"Select Country"` | `string` | The default option label. |
 | labelType | No | `"full"` | `string` | Either `"full"` or `"short"`. This governs whether you see country names or country short codes in the dropdown. |
 | valueType | No | `"full"` | `string` | Either `"full"` or `"short"`. This controls the actual `value` attribute of  each `<option>` in the dropdown. Please note, if you set this to `"short"` you will need to let the corresponding `<RegionDropdown />` component know as well, by passing a `countryValueType="short"` attribute. |
-| whitelist | No | `[]` | `array` | This setting lets you target specific countries to appear in the dropdown. Only those specified here will appear. This should be an array of country shortcodes. See the [country-region-data](https://github.com/country-region-data/country-region-data) repo for the data and the shortcodes. |
+| whitelist | No | `[]` | `array` | This setting lets you target specific countries to appear in the dropdown. Only those specified here will appear. This should be an array of country shortcodes. See the [country-region-data](https://github.com/country-regions/country-region-data) repo for the data and the shortcodes. |
 | blacklist | No | `[]` | `array` | Lets you target countries that should *not* appear in the dropdown. Should also be an array of country shortcodes. |
 | disabled | No | `false` | `boolean` | Disables the country field. |
 
@@ -168,7 +168,8 @@ countries you specify here. This *seriously* reduces file size, so if you can do
 <a name="changelog"></a>
 ### Changelog
 
-- `1.4.2` - Nov 8, 2018. `customOptions` setting added for the Region dropdown. 
+- `1.4.2` - Nov 8, 2018:
+    - `customOptions` setting added for the Region dropdown. 
     - `priorityOptions` option added to the CountryDropdown to allow placing items at the top of the country dropdown.
 - `1.4.1` - Sept 9, 2018: bug fix for invalid JSON data source conversion. 
 - `1.4.0` - Sept 8, 2018:
