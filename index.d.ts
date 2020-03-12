@@ -4,7 +4,7 @@
 
 import * as React from 'react';
 
-export interface CountryDropdownProps {
+export interface CountryDropdownProps<T = Element> {
   /**
    * The currently selected country. This should either
    * be the shortcode, or the full country name depending
@@ -19,10 +19,12 @@ export interface CountryDropdownProps {
    * that gets called when the user selects a country. Use
    * this to store the value in whatever store you're
    * using (or just the parent component state).
+   * 
+   * The original event is also provided optionally.
    *
    * Default value: undefined
    */
-  onChange: (val: string) => void;
+  onChange: (val: string, e?: React.ChangeEvent<T>) => void;
 
   /**
    * Callback that gets called when the user blurs off the country field.
@@ -228,14 +230,14 @@ export interface RegionDropdownProps {
    *
    * Default value: false
    */
-  disableWhenEmpty?: boolean;
+  disableWhenEmpty?: string;
 
   /**
    * Disables the region field. If set to true, it overrides disableWhenEmpty
    *
    * Default value: false
    */
-  disabled?: boolean;
+  disabled?: string;
 
   /**
    * Appends a list of string to the every region dropdown,
