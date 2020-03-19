@@ -1,10 +1,12 @@
-// Type definitions for react-country-region-selector 1.4.5 by <https://github.com/country-regions/react-country-region-selector>
+// Type definitions for react-country-region-selector 1.4.7 by <https://github.com/country-regions/react-country-region-selector>
 // Project: https://github.com/country-regions/react-country-region-selector
 // Definitions by: Kyle Davis <https://github.com/kyledavisdev>
 
-import * as React from 'react';
+import * as React from "react";
 
-export interface CountryDropdownProps<T = Element> {
+type ValueType = "full" | "short";
+
+export interface CountryDropdownProps {
   /**
    * The currently selected country. This should either
    * be the shortcode, or the full country name depending
@@ -19,12 +21,10 @@ export interface CountryDropdownProps<T = Element> {
    * that gets called when the user selects a country. Use
    * this to store the value in whatever store you're
    * using (or just the parent component state).
-   * 
-   * The original event is also provided optionally.
    *
    * Default value: undefined
    */
-  onChange: (val: string, e?: React.ChangeEvent<T>) => void;
+  onChange: (val: string) => void;
 
   /**
    * Callback that gets called when the user blurs off the country field.
@@ -83,7 +83,7 @@ export interface CountryDropdownProps<T = Element> {
    *
    * Default value: "full"
    */
-  labelType?: string;
+  labelType?: ValueType;
 
   /**
    * Either "full" or "short". This controls the actual value
@@ -94,7 +94,7 @@ export interface CountryDropdownProps<T = Element> {
    *
    * Default value: "full"
    */
-  valueType?: string;
+  valueType?: ValueType;
 
   /**
    * This setting lets you target specific countries to appear
@@ -124,7 +124,7 @@ export interface CountryDropdownProps<T = Element> {
 
 export class CountryDropdown extends React.Component<CountryDropdownProps> {}
 
-export interface RegionDropdownProps<T = Element> {
+export interface RegionDropdownProps {
   /**
    * The currently selected country.
    *
@@ -144,11 +144,9 @@ export interface RegionDropdownProps<T = Element> {
    * Use this to store the value in whatever store you're
    * using (or just the parent component state).
    *
-   * The original event is also provided optionally.
-   *
    * Default value: undefined
    */
-  onChange: (val: string, e?: React.ChangeEvent<T>) => void;
+  onChange: (val: string) => void;
 
   /**
    * Callback that gets called when the user blurs off the region field.
@@ -209,7 +207,7 @@ export interface RegionDropdownProps<T = Element> {
    *
    * Default value: "full"
    */
-  countryValueType?: string;
+  countryValueType?: ValueType;
 
   /**
    * Either "full" or "short". This governs whether you see
@@ -217,7 +215,7 @@ export interface RegionDropdownProps<T = Element> {
    *
    * Default value: "full"
    */
-  labelType?: "full" | "short";
+  labelType?: ValueType;
 
   /**
    * Either "full" or "short". This controls the actual value
@@ -225,21 +223,21 @@ export interface RegionDropdownProps<T = Element> {
    *
    * Default value: "full"
    */
-  valueType?: "full" | "short";
+  valueType?: ValueType;
 
   /**
    * Disables the region field when the user hasn't selected a country.
    *
    * Default value: false
    */
-  disableWhenEmpty?: string;
+  disableWhenEmpty?: boolean;
 
   /**
    * Disables the region field. If set to true, it overrides disableWhenEmpty
    *
    * Default value: false
    */
-  disabled?: string;
+  disabled?: boolean;
 
   /**
    * Appends a list of string to the every region dropdown,
