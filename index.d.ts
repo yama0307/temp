@@ -258,4 +258,4 @@ export interface RegionDropdownProps<T = Element> {
 
 export class RegionDropdown extends React.Component<RegionDropdownProps> {}
 
-export const CountryRegionData: [string[]];
+export type CountryRegionData = [string[]];
